@@ -1,0 +1,158 @@
+{
+  "name": "vue-template",
+  "version": "1.0.0",
+  "description": "vue,vue-template",
+  "main": "index.js",
+  "keywords": [
+    "vue"
+  ],
+  "author": "daipeng7",
+  "license": "ISC",
+  "homepage": "https://github.com/daipeng7/vue-template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daipeng7/vue-template.git"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "node ./build/dev.js",
+    "build": "node ./build/build.js",
+    "shipit:pre": "shipit pre deploy",
+    "shipit:prod": "shipit prod deploy",
+    "prepack": "husky install",
+    "test": "jest --verbose",
+    "analyz": "NODE_ENV=production npm_config_report=true npm run build"
+  },
+  "dependencies": {
+    "amfe-flexible": "^2.2.1",
+    "axios": "0.19.0",
+    "date-fns": "2.8.1",
+    "fastclick": "1.0.6",
+    "lodash": "4.17.15",
+    "vconsole": "^3.4.0",
+    "vue": "2.6.10",
+    "vue-router": "3.1.3",
+    "vuex": "3.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.7.2",
+    "@babel/plugin-external-helpers": "7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.6.2",
+    "@babel/preset-env": "7.7.1",
+    "@babel/runtime": "7.7.2",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "add-asset-html-webpack-plugin": "3.1.3",
+    "autoprefixer": "9.7.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.3",
+    "babel-jest": "24.9.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-component": "1.1.1",
+    "babel-plugin-import": "^1.13.3",
+    "cache-loader": "4.1.0",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "chalk": "3.0.0",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.0.5",
+    "css-loader": "3.2.0",
+    "eslint": "6.6.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "3.0.2",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "23.1.1",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "eslint-plugin-vue": "6.0.1",
+    "file-loader": "4.2.0",
+    "friendly-errors-webpack-plugin": "1.7.0",
+    "fs-extra": "8.1.0",
+    "happypack": "5.0.1",
+    "html-webpack-plugin": "3.2.0",
+    "husky": "^7.0.4",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "24.9.0",
+    "jest-serializer-vue": "2.0.2",
+    "jest-transform-stub": "2.0.0",
+    "lint-staged": "9.4.3",
+    "memory-fs": "0.5.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "node-notifier": "6.0.0",
+    "object-hash": "2.0.2",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "ora": "5.4.1",
+    "portfinder": "1.0.25",
+    "postcss-import": "12.0.1",
+    "postcss-loader": "3.0.0",
+    "postcss-plugin-px2rem": "0.8.1",
+    "postcss-url": "8.0.0",
+    "sass": "1.23.6",
+    "sass-loader": "8.0.0",
+    "semver": "6.3.0",
+    "shelljs": "0.8.3",
+    "shipit-cli": "5.3.0",
+    "shipit-deploy": "5.3.0",
+    "speed-measure-webpack-plugin": "1.3.1",
+    "standard-version": "^9.3.2",
+    "terser-webpack-plugin": "2.2.1",
+    "url-loader": "2.2.0",
+    "vue-jest": "3.0.5",
+    "vue-loader": "15.7.2",
+    "vue-style-loader": "4.1.2",
+    "vue-template-compiler": "2.6.10",
+    "webpack": "4.41.2",
+    "webpack-bundle-analyzer": "3.6.0",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "webpack-iconfont-plugin-nodejs": "1.0.16",
+    "webpack-merge": "4.2.2",
+    "yaml-loader": "^0.6.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/__tests__/**/*.{js,ts,vue}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,ts,vue}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,ts,vue}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,ts,vue}"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.(js|ts)$": "<rootDir>/node_modules/babel-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^@/(.*)\\.(css|less|scss|sss|styl|jpg|jpeg|png|svg)": "identity-obj-proxy",
+      "\\.(css|less|scss|sss|styl|jpg|jpeg|png|svg)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js, vue, scss}": [
+      "eslint",
+      "git add ."
+    ]
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

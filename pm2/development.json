@@ -1,0 +1,19 @@
+{
+	"apps": [
+		{
+			"name": "physique-h5_development",
+			"script": "./build/dev.js",
+			"instances": 2,
+			"exec_mode": "cluster",
+			"env": {
+				"NODE_ENV": "development",
+				"PROXY_HOST": "http://127.0.0.1:8092",
+				"PORT": 8093
+			},
+			"error_file": "/var/log/physique-h5_err.log",
+			"out_file": "/var/log/physique-h5_out.log",
+			"merge_logs": true,
+			"log_date_format": "YYYY-MM-DD HH:mm Z"
+		}
+	]
+}
